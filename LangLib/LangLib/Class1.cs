@@ -13,6 +13,8 @@ namespace LangLib
         private List<string> appLangStrings = new List<string>();
         public LangLibrary(string rootDir, string Lang)
         {
+            try
+            {
             using (StreamReader sr = new StreamReader(rootDir + "/lang/" + Lang + "/strings.ini")) //To allow for easy disposal of object when we are done. 
             {
                 int index = 0;
@@ -31,7 +33,12 @@ namespace LangLib
                     } 
                 } 
             } 
-
+            }
+            catch
+            {
+                //The file does not exist
+                throw;
+            }
         }
         public string getById(int id)
         {
