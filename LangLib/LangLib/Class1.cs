@@ -51,5 +51,20 @@ namespace LangLib
                 throw;
             }
         }
+        public static string getVersion()
+        {
+            getVersion("n vT, c");
+        }
+        public static string getVersion(string paramString)
+        {
+            paramString = paramString.Replace("n", "LangLib");
+            paramString = paramString.Replace("v", "1.1");
+            paramString = paramString.Replace("t", "Stable");
+            paramString = paramString.Replace("T", "S");
+            paramString = paramString.Replace("c", "Copyright 2015 Joshua Zenn);
+            paramString = paramString.Replace("a", "Joshua Zenn");
+            paramString = paramString.Replace("y", "2015");
+            return paramString;
+        }
     }
 }
