@@ -37,7 +37,7 @@ namespace LangLib
             catch
             {
                 //The file does not exist
-                throw;
+                throw new Exception("LangLib-0x001");
             }
         }
         public string getById(int id)
@@ -48,7 +48,7 @@ namespace LangLib
             }
             catch
             {
-                throw;
+                throw new Exception("LangLib-0x002");
             }
         }
         public static string getVersion()
